@@ -34,8 +34,8 @@
 
 ### Tech Stack <a name="tech-stack"></a>
 
-> ROR
-> POSTGRESQL
+#### RoR
+#### POSTGRESQL
 
 ### Key Features <a name="key-features"></a>
 
@@ -61,8 +61,8 @@ In order to run this project you need:
 
 Clone this repository to your desired folder:
 
-  mkdir my-things-catalog
-  cd my-things-catalog
+  mkdir blog-app
+  cd blog-app
   git clone git@github.com:eamador1/blog-app.git
 
   ### Install <a name="install">
@@ -71,9 +71,6 @@ Clone this repository to your desired folder:
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
- ### Usage <a name="usage">
-
-To make use of this project on the console, kindly run `ruby main.rb`
 
 ## 👥 Authors <a name="authors"></a>
 
