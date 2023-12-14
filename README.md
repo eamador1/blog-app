@@ -78,7 +78,7 @@ Clone this repository to your desired folder:
 
 - GitHub: [@eamador1](https://github.com/eamador1)
 - Twitter: [@hokieamador](https://twitter.com/hokieamador)
-- LinkedIn: [@hokiemador](https://linkedin.com/in/hokiemador)
+- LinkedIn: [@hokiemador](https://www.linkedin.com/in/hokieamador/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
