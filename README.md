@@ -82,6 +82,11 @@ Clone this repository to your desired folder:
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+## Future Features <a name="authors"></a>
+- Add validations
+- Use controllers to handle requests
+- Use preprocessed HTML file with embedded Ruby code
+
 
 ## 🤝 Contributing <a name="contributing"></a>
 
