@@ -28,7 +28,7 @@
 - [📝 License](#license)
 
 
-**Blog App** In this project, I use migration files to build my schema.
+**Blog App** In this project, I set up the models. I have tables for Users, Posts, Comments, and Likes, which means I need a model for each one
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -78,9 +78,14 @@ Clone this repository to your desired folder:
 
 - GitHub: [@eamador1](https://github.com/eamador1)
 - Twitter: [@hokieamador](https://twitter.com/hokieamador)
-- LinkedIn: [@hokiemador](https://linkedin.com/in/hokiemador)
+- LinkedIn: [@hokiemador](https://www.linkedin.com/in/hokieamador/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## Future Features <a name="authors"></a>
+- Add validations
+- Use controllers to handle requests
+- Use preprocessed HTML file with embedded Ruby code
 
 
 ## 🤝 Contributing <a name="contributing"></a>
