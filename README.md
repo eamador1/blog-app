@@ -28,7 +28,7 @@
 - [📝 License](#license)
 
 
-**Blog App** In this project, I use migration files to build my schema.
+**Blog App** In this project, I set up the models. I have tables for Users, Posts, Comments, and Likes, which means I need a model for each one
 
 ## 🛠 Built With <a name="built-with"></a>
 
