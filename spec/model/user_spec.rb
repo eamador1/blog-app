@@ -24,12 +24,13 @@ RSpec.describe User, type: :model do
 
     first_post = Post.create(title:'hay', author: first_user, created_at: 2.days.ago )
     second_post = Post.create(title: 'hey', author: first_user, created_at: 1.days.ago)
-    third_post = Post.create(title: 'hoy', author: first_user, created_at: 1.minute.ago)
+    third_post = Post.create(title: 'hoy', author: first_user, created_at: 3.minutes.ago)
+    fourth_post = Post.create(title: 'huy', author: first_user, created_at: 1.minute.ago)
 
     recent_posts = first_user.three_recent_posts
 
     expect(recent_posts.count).to eq(3)
-    expect(recent_posts).to include(third_post, second_post, first_post)
+    expect(recent_posts).to include(fourth_post, third_post, second_post)
     
   end
 end
