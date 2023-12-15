@@ -22,7 +22,7 @@ RSpec.describe User, type: :model do
   it 'shows the user three most recent posts' do
     first_user = User.create(name: 'John Doe', photo: 'www.example.com', bio: 'Blah Blah Blah')
 
-    first_post = Post.create(title:'hay', author: first_user, created_at: 2.days.ago )
+    first_post = Post.create(title: 'hay', author: first_user, created_at: 2.days.ago)
     second_post = Post.create(title: 'hey', author: first_user, created_at: 1.days.ago)
     third_post = Post.create(title: 'hoy', author: first_user, created_at: 3.minutes.ago)
     fourth_post = Post.create(title: 'huy', author: first_user, created_at: 1.minute.ago)
@@ -31,6 +31,6 @@ RSpec.describe User, type: :model do
 
     expect(recent_posts.count).to eq(3)
     expect(recent_posts).to include(fourth_post, third_post, second_post)
-    
+    expect(recent_posts).not_to include(first_post)
   end
 end
