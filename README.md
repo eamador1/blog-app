@@ -71,6 +71,22 @@ Clone this repository to your desired folder:
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+  ### Usage <a name="usage">
+
+- Run the following commands to migrate database and start the app
+```
+rails db:create db:migrate db:migrate RAILS_ENV=test
+rails s
+```
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+### Test <a name="test">
+
+- To run the tests please run the following command
+```
+ rspec spec
+```
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 👥 Authors <a name="authors"></a>
 
