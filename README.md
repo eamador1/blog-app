@@ -28,7 +28,7 @@
 - [📝 License](#license)
 
 
-**Blog App** In this project, I set up the models. I have tables for Users, Posts, Comments, and Likes, which means I need a model for each one
+**Blog App** In this project, I add validations to my models and create specs for them.
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -71,6 +71,22 @@ Clone this repository to your desired folder:
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+  ### Usage <a name="usage">
+
+- Run the following commands to migrate database and start the app
+```
+rails db:create db:migrate db:migrate RAILS_ENV=test
+rails s
+```
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+### Test <a name="test">
+
+- To run the tests please run the following command
+```
+ rspec spec
+```
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 👥 Authors <a name="authors"></a>
 
@@ -83,10 +99,12 @@ Clone this repository to your desired folder:
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## Future Features <a name="authors"></a>
-- Add validations
 - Use controllers to handle requests
 - Use preprocessed HTML file with embedded Ruby code
-
+- Integration specs for viewa and fix n+1 problems
+- Add devise
+- Add authorization rules
+- Add API end points
 
 ## 🤝 Contributing <a name="contributing"></a>
 
