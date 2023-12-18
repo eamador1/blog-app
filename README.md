@@ -28,7 +28,7 @@
 - [📝 License](#license)
 
 
-**Blog App** In this project, I add validations to my models and create specs for them.
+**Blog App** In this project, I create all controllers and views for my Blog app. As I am not processing any data yet, I add simple placeholders for your views with plain HTML.
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -99,7 +99,6 @@ rails s
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## Future Features <a name="authors"></a>
-- Use controllers to handle requests
 - Use preprocessed HTML file with embedded Ruby code
 - Integration specs for viewa and fix n+1 problems
 - Add devise
