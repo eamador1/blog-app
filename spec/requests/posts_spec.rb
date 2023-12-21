@@ -31,7 +31,7 @@ RSpec.describe 'Posts', type: :request do
     it 'returns http success' do
       expect(response).to have_http_status(:success)
     end
-    
+
     it 'shows correct placeholder text in the response body' do
       expect(response.body).to include('<h1>Posts show</h1>')
     end
