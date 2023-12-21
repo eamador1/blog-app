@@ -8,8 +8,6 @@ RSpec.describe 'Posts', type: :request do
   let(:post) do
     Post.create(title: 'Test Post', text: 'Lorem Ipsum', author: user)
   end
-  # @post_path = "/users/#{@user.id}/posts"
-  # @post_id_path = "/users/#{@user.id}/posts/#{@post.id}"
 
   describe 'GET /users/:user_id/posts' do
     before { get user_posts_path(user) }
