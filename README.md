@@ -28,7 +28,9 @@
 - [📝 License](#license)
 
 
-**Blog App** In this project, I create all controllers and views for my Blog app. As I am not processing any data yet, I add simple placeholders for your views with plain HTML.
+**Blog App** 
+
+In this project, I set up tests on the controllers I recently added to my Blog app.
 
 ## 🛠 Built With <a name="built-with"></a>
 
