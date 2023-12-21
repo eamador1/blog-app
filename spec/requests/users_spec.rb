@@ -19,7 +19,6 @@ RSpec.describe 'Users', type: :request do
     it 'renders the index templete' do
       expect(response).to render_template(:index)
     end
-    
   end
 
   describe 'GET /users/user_id' do
