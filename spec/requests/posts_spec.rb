@@ -28,6 +28,10 @@ RSpec.describe 'Posts', type: :request do
   describe 'GET /users/:user_id/posts/:id' do
     before { get user_post_path(user, post) }
 
+    it 'returns http success' do
+      expect(response).to have_http_status(:success)
+    end
+    
     it 'shows correct placeholder text in the response body' do
       expect(response.body).to include('<h1>Posts show</h1>')
     end
