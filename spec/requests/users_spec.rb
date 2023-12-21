@@ -15,6 +15,11 @@ RSpec.describe 'Users', type: :request do
     it 'shows all users' do
       expect(response.body).to include '<h1>Users index</h1>'
     end
+
+    it 'renders the index templete' do
+      expect(response).to render_template(:index)
+    end
+    
   end
 
   describe 'GET /users/user_id' do
@@ -23,12 +28,12 @@ RSpec.describe 'Users', type: :request do
       expect(response).to have_http_status(:success)
     end
 
-    it 'returns http success' do
-      expect(response).to have_http_status(:success)
-    end
-
     it 'shows specific user' do
       expect(response.body).to include '<h1>Users show</h1>'
+    end
+
+    it 'renders the index templete' do
+      expect(response).to render_template(:show)
     end
   end
 end
