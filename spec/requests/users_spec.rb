@@ -20,7 +20,6 @@ RSpec.describe 'Users', type: :request do
   describe 'GET /users/user_id' do
     before { get user_path(user) }
     it 'returns http success' do
-      user = User.create(name: 'John Doe')
       expect(response).to have_http_status(:success)
     end
 
