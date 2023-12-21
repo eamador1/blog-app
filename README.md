@@ -28,7 +28,9 @@
 - [📝 License](#license)
 
 
-**Blog App** In this project, I set up tests on the controllers I recently added to my Blog app.
+**Blog App** 
+
+In this project, I set up tests on the controllers I recently added to my Blog app.
 
 ## 🛠 Built With <a name="built-with"></a>
 
