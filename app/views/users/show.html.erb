@@ -1,19 +1,23 @@
-<div class=" user-posts">
-<%= render "application/user" %>
+<%= stylesheet_link_tag ('users_show')%>
 
+
+<%= render "application/user" %>
+<div class=" user-posts">
 <div class= "bio">
-<h6>Bio</h6><br>
-<%= @user.bio %>
+<h4 class="bio-head">Bio  </h6><br>
+<p class="bio-text"> <%= @user.bio %> </p>
 </div>
 
 <% @user.posts.limit(3).each do |post| %>
 <div class= "post">
-<h4> <%=post.title%></h4><br>
+<h4 class= "title"> <%=post.title%></h4><br>
 <p><%= post.text.split[0, 10].join(' ') %></p><br>
-<span>Comments <%= post.comments_counter %> </span>
-  <span>Likes <%= post.likes_counter%> </span>
+<div class="span">
+<span >Comments <%= post.comments_counter %> Likes <%= post.likes_counter%> </span>
+</div>
 </div>
 <% end %>
-
+<div class=button-container>
 <%= link_to "See all posts", user_posts_path(@user), class: 'button', remote: true %>
+</div>
 </div>
