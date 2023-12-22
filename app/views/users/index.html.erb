@@ -1,9 +1,13 @@
+<%= stylesheet_link_tag ('users_index')%>
+
 <div class="users">
 <% @users.each do |user| %>
 <div class="user">
-<%= image_tag(user.photo, alt: user.name) %>
+<img src='https://picsum.photos/100', alt='user-image', class='image'/>
+<div class="user-text">
 <h2><%= link_to user.name, user_path(user) %><h2>
-<p>Number of posts: <%= user.post_counter %><p>
+<div class= "p-container"> <span class= "n-post">Number of posts: <%= user.post_counter %><span> </div>
+</div>
 </div>
 <% end %>
 </div>
