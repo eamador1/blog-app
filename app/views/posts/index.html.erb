@@ -1,2 +1,35 @@
-<h1>Posts Index</h1>
-<p>User posts</p>
+<%= stylesheet_link_tag('posts_index') %>
+
+
+<%= render "application/user" %>
+<div class="posts-container">
+<% @user.posts.each do |post| %>
+<div class="posts">
+<div class= "post1">
+  <h4 class= "title"> <%= link_to post.title, user_post_path(@user, post) %></h4><br>
+  <p><%= post.text.split[0, 10].join(' ') %></p><br>
+  <div class="span">
+    <span >Comments <%= post.comments_counter %> Likes <%= post.likes_counter%> </span>
+  </div>
+</div>
+
+<div class="comments">
+    <% if post.comments.any? %>
+      <% post.comments.limit(5).each do |comment| %>
+      <div class="comment">
+        <span><%= comment.user.name%>: 
+        <%= comment.text%> </span>
+      </div>
+    <% end %>
+
+    <% else %>
+      <p>No comments available!</p>
+    <% end %>
+</div>
+</div>
+<%end%>
+<div class= "pagination-container">
+  <button type="button">Pagination</button>
+</div>
+</div>
+</div>

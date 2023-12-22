@@ -1,2 +1,25 @@
-<h1>Posts show</h1>
-<p>Post and comments</p>
+<%= stylesheet_link_tag('posts_show') %>
+
+<div class="extended-posts">
+  <div class="extended-post-header">
+    <h4><%= @post.title %> by <%= @user.name%></h4>
+     <span class="reaction-counter">Comments <%= @post.comments_counter %> Likes <%= @post.likes_counter%> </span>
+  </div>
+  <div class="post-text-extended">
+    <p><%= @post.text%></p>
+  </div>
+ 
+  </div>
+  <div class="comments">
+    <% if @post.comments.any? %>
+      <% @post.comments.each do |comment| %>
+      <div class="comment">
+        <span><%= comment.user.name%>: <%= comment.text%> </span>
+      </div>
+    <% end %>
+
+    <% else %>
+      <p>No comments available!</p>
+    <% end %>
+</div>
+

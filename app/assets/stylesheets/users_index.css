@@ -1,0 +1,48 @@
+.users {
+  margin: 3vh 0 0 9vh;
+  width: 90vw;
+}
+
+.image {
+  width: 15vw;
+  height: 20vh;
+  border: 2px solid black;
+}
+
+.p-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  margin-top: 5vh;
+  width: 20vw;
+  margin-left: 30vw;
+}
+
+.n-post {
+  font-size: 16px;
+  font-weight: 400;
+  align-self: flex-end;
+}
+
+h2 {
+  padding-left: 10vw;
+  width: 30%;
+  margin-top: 6vh;
+}
+
+.user {
+  width: 90vw;
+  display: flex;
+  margin-bottom: 3vh;
+}
+
+.user-text {
+  width: 75vw;
+  margin-left: 5vw;
+  border: 2px solid black;
+  height: 20vh;
+}
+
+.individual-user {
+  margin-top: 5vh;
+}

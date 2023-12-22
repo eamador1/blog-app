@@ -1,0 +1,26 @@
+.post1,
+.comments {
+  margin-left: 5vw;
+  padding-left: 2vw;
+  border: 2px solid black;
+  margin-top: 3vh;
+  width: 90vw;
+}
+
+.span {
+  width: 80vw;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.pagination-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 3vh;
+  margin-bottom: 3vh;
+}
+
+button {
+  width: 10vw;
+  height: 5vh;
+}
