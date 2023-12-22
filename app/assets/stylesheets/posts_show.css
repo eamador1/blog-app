@@ -1,0 +1,19 @@
+.comments {
+  margin-left: 5vw;
+  padding-left: 2vw;
+  border: 2px solid black;
+  margin-top: 3vh;
+  width: 90vw;
+}
+
+.extended-posts {
+  margin-left: 5vw;
+  padding-left: 2vw;
+  border: 2px solid black;
+  margin-top: 3vh;
+  width: 90vw;
+}
+
+.reaction-counter {
+  margin-left: 65vw;
+}
