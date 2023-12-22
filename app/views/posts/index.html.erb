@@ -1,2 +1,26 @@
-<h1>Posts Index</h1>
-<p>User posts</p>
+<div class="posts">
+<%= render "application/user" %>
+
+<% @user.posts.each do |post| %>
+<div class= "post">
+  <h4> <%= link_to post.title, user_post_path(@user, post) %></h4><br>
+  <p><%= post.text.split[0, 10].join(' ') %></p><br>
+  <span>Comments <%= post.comments_counter %> </span>
+  <span>Likes <%= post.likes_counter%> </span>
+</div>
+<div class="comments>
+    <% if post.comments.any? %>
+      <% post.comments.limit(5).each do |comment| %>
+      <div class="comment">
+        <span><strong><%= comment.user.name%>: <strong><%= comment.text%> </span>
+      </div>
+    <% end %>
+
+    <% else %>
+      <p>No comments available!</p>
+    <% end %>
+</div>
+</div>
+<%end%>
+<div><button type:"button">Pagination</button></div>
+</div>
