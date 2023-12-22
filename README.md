@@ -30,7 +30,7 @@
 
 **Blog App** 
 
-In this project, I set up tests on the controllers I recently added to my Blog app.
+n this project I am adding the Views associated with the Models and Controllers Imalready created for the Blog App.
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -101,8 +101,7 @@ rails s
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## Future Features <a name="authors"></a>
-- Use preprocessed HTML file with embedded Ruby code
-- Integration specs for viewa and fix n+1 problems
+- Integration specs for views and fix n+1 problems
 - Add devise
 - Add authorization rules
 - Add API end points
