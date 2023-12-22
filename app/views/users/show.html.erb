@@ -1,2 +1,19 @@
-<h1>Users show</h1>
-<p>User information</p>
+<div class=" user-posts">
+<%= render "application/user" %>
+
+<div class= "bio">
+<h6>Bio</h6><br>
+<%= @user.bio %>
+</div>
+
+<% @user.posts.limit(3).each do |post| %>
+<div class= "post">
+<h4> <%=post.title%></h4><br>
+<p><%= post.text.split[0, 10].join(' ') %></p><br>
+<span>Comments <%= post.comments_counter %> </span>
+  <span>Likes <%= post.likes_counter%> </span>
+</div>
+<% end %>
+
+<%= link_to "See all posts", user_posts_path(@user), class: 'button', remote: true %>
+</div>
