@@ -1,0 +1,41 @@
+.user-posts {
+  width: 90vw;
+  margin: 3vh 0 0 5vw;
+}
+
+.bio {
+  width: 90vw;
+  border: 2px solid black;
+}
+
+.bio-head {
+  margin-left: 2vw;
+}
+
+.bio-text {
+  margin-bottom: 3vh;
+  margin-left: 2vw;
+}
+
+.post {
+  padding-left: 2vw;
+  border: 2px solid black;
+  margin-top: 3vh;
+}
+
+.span {
+  width: 80vw;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.button {
+  border: 1px solid black;
+  padding: 5px;
+}
+
+.button-container {
+  display: flex;
+  margin-top: 3vh;
+  justify-content: center;
+}
