@@ -7,7 +7,7 @@
   <div class="post-text-extended">
     <p><%= @post.text%></p>
   </div>
-  <div class="comments>
+  <div class="comments">
     <% if @post.comments.any? %>
       <% @post.comments.each do |comment| %>
       <div class="comment">
