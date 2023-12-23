@@ -15,7 +15,7 @@
     <% if @post.comments.any? %>
       <% @post.comments.each do |comment| %>
       <div class="comment">
-        <span><%= comment.user&.name || 'Unknown User'%>: <%= comment.text%> </span>
+        <span><%= comment.user&.name %>: <%= comment.text%> </span>
       </div>
     <% end %>
 
