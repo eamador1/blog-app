@@ -23,7 +23,9 @@ class PostsController < ApplicationController
   end
 
   def show
+    @user = current_user
     @comments = @post.comments
+    @post = Post.find(params[:id])
   end
 
   def set_user
