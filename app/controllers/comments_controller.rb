@@ -1,20 +1,18 @@
 class CommentsController < ApplicationController
   before_action :set_post, except: [:new]
 
-  def new
-    @comment = Comment.new
-  end
-
   def create
-    @comment =
-      @post.comments.build(comment_params.merge(user:
-      @current_user))
+    @comment = Comment.new(comment_params)
+    @comment.post = @post
+    @comment.user = current_user
 
     if @comment.save
-      redirect_to user_post_path(@post.author, @post),
+      redirect_to user_post_path(current_user, @post),
                   notice: 'Comment added!'
     else
-      render 'posts/show', alert: 'Comment not added!'
+      puts "Validation errors: #{comment.errors.full_messages}" # Add this line for debugging
+      flash.now[:alert] = 'Comment not added!'
+      render 'posts/show'
     end
   end
 
