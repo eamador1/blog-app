@@ -5,8 +5,8 @@ class LikesController < ApplicationController
       flash[:notice] = 'Like added!'
     else
       flash[:notice] = @like.errors.full_messages.to_sentence unless @like.save
-      redirect_to @like.post
     end
+    redirect_to user_post_path(@like.post.author, @like.post)
   end
 
   private
