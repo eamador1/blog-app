@@ -14,6 +14,10 @@
   </div>
  
   </div>
+
+  <%= link_to "Add Comment", new_user_post_comment_path(@user, @post),
+class: 'comment-button' %>
+
   <div class="comments">
 
     <% if @post.comments.any? %>
@@ -27,8 +31,5 @@
       <p>No comments available!</p>
     <% end %>
 </div>
-<div>
-<%= render partial: 'comments/form', locals: {
-      post: @post, comment: Comment.new } %>
-</div>
+
 
