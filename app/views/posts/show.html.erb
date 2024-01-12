@@ -2,7 +2,11 @@
 
 <div class="extended-posts">
   <div class="extended-post-header">
-    <h4><%= @post.title %> by <%= @user.name%></h4>
+    <h4><%= @post.title %> by <%= @user&.name%></h4>
+      <form action="/users/:user_id/posts/:post_id/likes" method="post">
+      <input type="hidden" name="like[post_id]" value="<%= @post.id %>">
+      <input type="submit" value="Like">
+    </form>
      <span class="reaction-counter">Comments <%= @post.comments_counter %> Likes <%= @post.likes_counter%> </span>
   </div>
   <div class="post-text-extended">
@@ -10,11 +14,16 @@
   </div>
  
   </div>
+
+  <%= link_to "Add Comment", new_user_post_comment_path(@user, @post),
+class: 'comment-button' %>
+
   <div class="comments">
+
     <% if @post.comments.any? %>
       <% @post.comments.each do |comment| %>
       <div class="comment">
-        <span><%= comment.user.name%>: <%= comment.text%> </span>
+        <span><%= comment.user&.name %>: <%= comment.text%> </span>
       </div>
     <% end %>
 
@@ -22,4 +31,5 @@
       <p>No comments available!</p>
     <% end %>
 </div>
+
 
