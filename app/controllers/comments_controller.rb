@@ -1,5 +1,6 @@
 class CommentsController < ApplicationController
-  before_action :set_post, except: [:new]
+  before_action :set_user, only: [:create]
+  before_action :set_post
 
   def create
     @comment = Comment.new(comment_params)
@@ -7,7 +8,7 @@ class CommentsController < ApplicationController
     @comment.user = current_user
 
     if @comment.save
-      redirect_to user_post_path(current_user, @post),
+      redirect_to user_post_path(@user, @post),
                   notice: 'Comment added!'
     else
       puts "Validation errors: #{comment.errors.full_messages}" # Add this line for debugging
@@ -17,6 +18,10 @@ class CommentsController < ApplicationController
   end
 
   private
+
+  def set_user
+    @user = User.find(params[:user_id])
+  end
 
   def set_post
     @post = Post.find(params[:post_id])
