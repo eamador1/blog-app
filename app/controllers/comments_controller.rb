@@ -2,6 +2,10 @@ class CommentsController < ApplicationController
   before_action :set_user, only: [:create]
   before_action :set_post
 
+  def new
+    @comment = Comment.new
+  end
+  
   def create
     @comment = Comment.new(comment_params)
     @comment.post = @post
