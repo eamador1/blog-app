@@ -1,11 +1,11 @@
 <%= stylesheet_link_tag('users_index')%>
 
 <div class="users">
-<div class="user">
-  <img src='https://picsum.photos/100', alt='user-image', class='image'/>
-  <div class="user-text">
-    <h2><%= link_to @user.name, user_path(@user) %></h2>
-    <div class= "p-container"><p class= "n-post">Number of posts: <%= @user.post_counter %><p></div>
+  <div class="user">
+    <img src='https://picsum.photos/100', alt='user-image', class='image'/>
+    <div class="user-text">
+      <h2><%= link_to @user.name, user_path(@user) %></h2>
+      <div class= "p-container"><p class= "n-post">Number of posts: <%= @user.post_counter %><p></div>
     </div>
-</div>
+  </div>
 </div>
