@@ -3,10 +3,7 @@
 <div class="extended-posts">
   <div class="extended-post-header">
     <h4><%= @post.title %> by <%= @user&.name%></h4>
-      <form action="/users/:user_id/posts/:post_id/likes" method="post">
-      <input type="hidden" name="like[post_id]" value="<%= @post.id %>">
-      <input type="submit" value="Like">
-    </form>
+      <%= render "application/like" %>
      <span class="reaction-counter">Comments <%= @post.comments_counter %> Likes <%= @post.likes_counter%> </span>
   </div>
   <div class="post-text-extended">
