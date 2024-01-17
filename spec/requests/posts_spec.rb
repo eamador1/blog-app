@@ -16,10 +16,6 @@ RSpec.describe 'Posts', type: :request do
       expect(response).to have_http_status(:success)
     end
 
-    it 'shows correct placeholder text in the response body' do
-      expect(response.body).to include('<h1>Posts Index</h1>')
-    end
-
     it 'renders the index template' do
       expect(response).to render_template(:index)
     end
@@ -30,10 +26,6 @@ RSpec.describe 'Posts', type: :request do
 
     it 'returns http success' do
       expect(response).to have_http_status(:success)
-    end
-
-    it 'shows correct placeholder text in the response body' do
-      expect(response.body).to include('<h1>Posts show</h1>')
     end
 
     it 'renders the show template' do

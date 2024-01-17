@@ -3,7 +3,8 @@ class PostsController < ApplicationController
   before_action :set_post, only: [:show]
 
   def index
-    @posts = @user.posts
+    @user = User.find(params[:user_id])
+    @posts = @user.posts.includes(:user, :comments, :likes).order(created_at: :desc)
   end
 
   def new
@@ -25,7 +26,7 @@ class PostsController < ApplicationController
   def show
     @user = current_user
     @comments = @post.comments
-    @post = Post.find(params[:id])
+    @post = Post.includes(:author, :comments).find(params[:id])
   end
 
   def set_user

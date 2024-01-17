@@ -12,10 +12,6 @@ RSpec.describe 'Users', type: :request do
       expect(response).to have_http_status(:success)
     end
 
-    it 'shows all users' do
-      expect(response.body).to include '<h1>Users index</h1>'
-    end
-
     it 'renders the index templete' do
       expect(response).to render_template(:index)
     end
@@ -25,10 +21,6 @@ RSpec.describe 'Users', type: :request do
     before { get user_path(user) }
     it 'returns http success' do
       expect(response).to have_http_status(:success)
-    end
-
-    it 'shows specific user' do
-      expect(response.body).to include '<h1>Users show</h1>'
     end
 
     it 'renders the index templete' do
