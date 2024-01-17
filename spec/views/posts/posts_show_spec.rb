@@ -44,11 +44,11 @@ RSpec.describe Post, type: :system do
 
     it 'displays the comment each commentator left' do
       expect(page).to have_content('I like this post')
-      # expect(page).to have_content('I like this post 2')
-      # expect(page).to have_content('I like this post 3')
-      # expect(page).to have_content('I like this post 4')
-      # expect(page).to have_content('I like this post 5')
-      # expect(page).to have_content('I like this post 6')
+      expect(page).to have_content('I like this post 2')
+      expect(page).to have_content('I like this post 3')
+      expect(page).to have_content('I like this post 4')
+      expect(page).to have_content('I like this post 5')
+      expect(page).to have_content('I like this post 6')
     end
   end
 end
