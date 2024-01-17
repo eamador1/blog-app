@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe User, type: :system do
+RSpec.describe User, type: :feature do
   describe 'user index page' do
     before do
       @user1 = User.create(name: 'FirstUser', post_counter: 2, photo: 'https://picsum.photos/100')
