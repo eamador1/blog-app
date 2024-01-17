@@ -30,7 +30,9 @@
 
 **Blog App** 
 
-In this project I am adding adding forms to my Blog app.
+In this project, I create integration tests for all of the views used in the project. I covered the user stories (or user workflows) that I want my users to experience while taking into consideration the possible errors your users may cause.
+
+
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -44,7 +46,7 @@ In this project I am adding adding forms to my Blog app.
 - **Install Ruby on Rails framework**
 - **Use Ruby gems as a software packages system**
 - **Use database migration files to maintain database schema**
-
+- **Run integration tests**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -78,6 +80,7 @@ Clone this repository to your desired folder:
 - Run the following commands to migrate database and start the app
 ```
 rails db:create db:migrate db:migrate RAILS_ENV=test
+bundle install
 rails s
 ```
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
