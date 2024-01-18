@@ -8,7 +8,7 @@ Rails.application.routes.draw do
       resources :posts, only: [:index, :show, :new, :create, :destroy] do
         post 'like', to: 'likes#create', on: :member, as:
         :user_post_likes
-        resources :comments, only: [:create, :destroy]
+        resources :comments, only: [:create, :new, :destroy]
         resources :likes, only: [:create]
 
   end 
