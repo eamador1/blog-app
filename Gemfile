@@ -72,3 +72,4 @@ end
 
 gem 'devise'
 gem 'faker'
+gem 'cancancan', '~> 3.5'
