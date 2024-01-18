@@ -30,7 +30,7 @@
 
 **Blog App** 
 
-In this project, I create integration tests for all of the views used in the project. I covered the user stories (or user workflows) that I want my users to experience while taking into consideration the possible errors your users may cause.
+In this project, I add the devise gem to your app and use it for the registration and login of users.
 
 
 
@@ -104,7 +104,6 @@ rails s
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## Future Features <a name="authors"></a>
-- Add devise
 - Add authorization rules
 - Add API end points
 
