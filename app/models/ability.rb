@@ -5,11 +5,11 @@ class Ability
 
   def initialize(user)
         user ||= User.new
-        can :read, :all
    
     if user.is? :admin
       can :manage, [Post, Comment, Like]
       else
+        can :read, :all
         can :create, [Comment, Like]
         can :destroy, Post, author_id: user.id
         can :destroy, Comment, user_id: user.id
