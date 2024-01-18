@@ -30,9 +30,7 @@
 
 **Blog App** 
 
-In this project, I add the devise gem to your app and use it for the registration and login of users.
-
-
+In this project, I add authorization to your app using CanCanCan.
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -47,6 +45,8 @@ In this project, I add the devise gem to your app and use it for the registratio
 - **Use Ruby gems as a software packages system**
 - **Use database migration files to maintain database schema**
 - **Run integration tests**
+- **Authentication**
+- **Authorization**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
