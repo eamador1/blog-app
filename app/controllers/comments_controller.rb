@@ -27,7 +27,7 @@ class CommentsController < ApplicationController
     @comment.comments_counter_update
     redirect_to user_post_path(@comment.post.author_id, @comment.post.id), notice: 'Comment successfully deleted.'
   end
-  
+
   private
 
   def set_user
