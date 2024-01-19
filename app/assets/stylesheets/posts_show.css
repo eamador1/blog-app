@@ -17,3 +17,8 @@
 .reaction-counter {
   margin-left: 65vw;
 }
+
+.comment {
+  display: flex;
+  justify-content: space-between;
+}

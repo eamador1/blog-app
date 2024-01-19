@@ -11,6 +11,13 @@
   </div>
   <div class="post-text-extended">
     <p><%= @post.text%></p>
+    <% if can?(:destroy, @post) %>
+      <form action="<%= user_post_path(@user, @post) %>" method="post">
+        <%= hidden_field_tag :_method, :delete %>
+        <%= csrf_meta_tags %>
+        <input type="submit" value="Delete Post" onclick="return confirm('Are you sure?');">
+      </form>
+    <% end %>
   </div>
  
   </div>
@@ -24,6 +31,12 @@ class: 'comment-button' %>
       <% @post.comments.each do |comment| %>
       <div class="comment">
         <span><%= comment.user&.name %>: <%= comment.text%> </span>
+        <% if can?(:destroy, comment) %>
+          <%= form_with(model: [@user, @post, comment], url: user_post_comment_path(@user, @post, comment), method: :delete) do |form| %>
+          <%= form.hidden_field :_method, value: :delete %>
+          <%= form.submit "Delete Comment", onclick: "return confirm('Are you sure?')" %>
+        <% end %>
+    <% end %>
       </div>
     <% end %>
 
