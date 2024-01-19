@@ -25,8 +25,8 @@ class PostsController < ApplicationController
 
   def show
     @user = current_user
-    @comments = @post.comments
     @post = Post.includes(:author, :comments).find(params[:id])
+    @comments = @post.comments
   end
 
   def destroy
