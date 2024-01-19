@@ -15,7 +15,7 @@
       <form action="<%= user_post_path(@user, @post) %>" method="post">
         <%= hidden_field_tag :_method, :delete %>
         <%= csrf_meta_tags %>
-        <input type="submit" value="Delete Post">
+        <input type="submit" value="Delete Post" onclick="return confirm('Are you sure?');">
       </form>
     <% end %>
   </div>
@@ -34,7 +34,7 @@ class: 'comment-button' %>
         <% if can?(:destroy, @post) %>
           <%= form_with(model: [@user, @post, comment], url: user_post_comment_path(@user, @post, comment), method: :delete) do |form| %>
           <%= form.hidden_field :_method, value: :delete %>
-          <%= form.submit "Delete Comment" %>
+          <%= form.submit "Delete Comment", onclick: "return confirm('Are you sure?')" %>
         <% end %>
     <% end %>
       </div>
