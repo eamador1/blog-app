@@ -70,6 +70,6 @@ group :test do
   gem 'selenium-webdriver'
 end
 
+gem 'cancancan', '~> 3.5'
 gem 'devise'
 gem 'faker'
-gem 'cancancan', '~> 3.5'
