@@ -1,6 +1,11 @@
 class PostsController < ApplicationController
+  
+  load_and_authorize_resource
+
   before_action :set_user, only: %i[index show new create]
   before_action :set_post, only: [:show]
+  before_action :inspect_user_and_ability
+
 
   def index
     @user = User.find(params[:user_id])
@@ -46,5 +51,12 @@ class PostsController < ApplicationController
 
   def post_params
     params.require(:post).permit(:title, :text)
+  end
+
+  private
+
+  def inspect_user_and_ability
+    Rails.logger.debug("Current User: #{current_user.inspect}")
+    Rails.logger.debug("Ability: #{current_ability.inspect}")
   end
 end
