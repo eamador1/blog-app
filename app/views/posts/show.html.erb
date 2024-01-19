@@ -29,6 +29,10 @@ class: 'comment-button' %>
       <% @post.comments.each do |comment| %>
       <div class="comment">
         <span><%= comment.user&.name %>: <%= comment.text%> </span>
+        <%= form_with(model: [@user, @post, comment], url: user_post_comment_path(@user, @post, comment), method: :delete) do |form| %>
+      <%= form.hidden_field :_method, value: :delete %>
+      <%= form.submit "Delete Comment" %>
+    <% end %>
       </div>
     <% end %>
 
