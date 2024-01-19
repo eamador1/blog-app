@@ -11,6 +11,11 @@
   </div>
   <div class="post-text-extended">
     <p><%= @post.text%></p>
+    <form action="<%= user_post_path(@user, @post) %>" method="post">
+      <%= hidden_field_tag :_method, :delete %>
+      <%= csrf_meta_tags %>
+      <input type="submit" value="Delete Post">
+    </form>
   </div>
  
   </div>
