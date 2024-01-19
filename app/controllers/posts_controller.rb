@@ -29,6 +29,13 @@ class PostsController < ApplicationController
     @post = Post.includes(:author, :comments).find(params[:id])
   end
 
+  def destroy
+    @post = Post.find(params[:id])
+    @post.update_posts_counter
+    @post.destroy
+    redirect_to user_posts_path(@post.author_id), notice: 'Post deleted successfully'
+  end
+
   def set_user
     @user = User.find(params[:user_id])
   end
