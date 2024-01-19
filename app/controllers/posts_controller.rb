@@ -1,11 +1,9 @@
 class PostsController < ApplicationController
-  
   load_and_authorize_resource
 
   before_action :set_user, only: %i[index show new create]
   before_action :set_post, only: [:show]
   before_action :inspect_user_and_ability
-
 
   def index
     @user = User.find(params[:user_id])
