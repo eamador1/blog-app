@@ -8,7 +8,7 @@ class Ability
       can :manage, [Post, Comment, Like]
     else
       can :read, :all
-      can :create, [Comment, Like]
+      can :create, [Post,Comment, Like]
       can :destroy, Post, author_id: user.id
       can :destroy, Comment, user_id: user.id
     end
