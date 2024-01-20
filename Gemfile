@@ -70,6 +70,7 @@ group :test do
   gem 'selenium-webdriver'
 end
 
+gem 'active_model_serializers', '~> 0.10.0'
 gem 'cancancan', '~> 3.5'
 gem 'devise'
 gem 'faker'
