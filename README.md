@@ -30,7 +30,7 @@
 
 **Blog App** 
 
-In this project, I add authorization to your app using CanCanCan.
+In this project, I add some API endpoints to your Blog app. This will allow your app to be used in different ways, rather than just through your site - for example, a mobile app or a CLI application.
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -47,6 +47,7 @@ In this project, I add authorization to your app using CanCanCan.
 - **Run integration tests**
 - **Authentication**
 - **Authorization**
+- **Add API endpoints**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -102,10 +103,6 @@ rails s
 - LinkedIn: [@hokiemador](https://www.linkedin.com/in/hokieamador/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-## Future Features <a name="authors"></a>
-- Add authorization rules
-- Add API end points
 
 ## 🤝 Contributing <a name="contributing"></a>
 
